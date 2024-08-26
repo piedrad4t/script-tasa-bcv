@@ -40,7 +40,7 @@ export const parseBankTable = (bankData) => {
 
 export const parseIntervention = (interventionData) => {
   const rows = interventionData.trim().split("\n").slice(1);
-
+  console.log(rows);
   const values = rows[0].match(/\S+/g);
   return {
     date: values[0],

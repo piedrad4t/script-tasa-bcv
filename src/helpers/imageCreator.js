@@ -1,4 +1,4 @@
-import { createCanvas, loadImage, registerFont } from "canvas";
+import { createCanvas, loadImage } from "canvas";
 import fs from "fs";
 import moment from "moment";
 
@@ -46,7 +46,7 @@ export const createImageTypeExchange = async (jsonData) => {
 
     // Posición para escribir la información en la imagen
     let x = 1160;
-    let y = 776;
+    let y = 772;
 
     // Escribir cada fila de datos en la imagen
     jsonData.forEach((data) => {
@@ -57,10 +57,10 @@ export const createImageTypeExchange = async (jsonData) => {
 
     const context_date = canvas.getContext("2d");
     context.fillStyle = "#00000"; // Color de texto negro
-    context.font = "36px Calibri"; // Tamaño y tipo de fuente
+    context.font = "40px Calibri"; // Tamaño y tipo de fuente
     context.textAlign = "left";
-    let date_x = 633;
-    let date_y = 1275;
+    let date_x = 673;
+    let date_y = 1277;
 
     context_date.fillText(date_capitalized, date_x, date_y);
 
@@ -124,8 +124,8 @@ export const createImageInfoRate = async(jsonData) => {
     context_date.fillStyle = "#000000"; // Color de texto negro
     context_date.font = "36px Calibri"; // Tamaño y tipo de fuente
     context_date.textAlign = "left";
-    let date_x = 804;
-    let date_y = 1303;
+    let date_x = 724;
+    let date_y = 1289;
 
     context_date.fillText(fecha, date_x, date_y);
 
@@ -161,16 +161,16 @@ export const createImageIntervention = async(jsonData) => {
     // Escribir la información en el lienzo
     context.fillStyle = "#000000"; 
     context.font = "bold 125px Calibri"; 
-    context.fillText(`${jsonData.rate}`, 559, 912);
+    context.fillText(`${jsonData.rate}`, 569, 912);
     
-
+    // Escribir la información en el lienzo SEMANA
     context_week.fillStyle = "#1F497D"; 
     context_week.font = "41px Calibri"; 
-    context_week.fillText(`${jsonData.week}`, 876, 493);
+    context_week.fillText(`${jsonData.week}`, 876, 490);
 
     context_date.fillStyle = "#000000";
     context_date.font = "39px Calibri"; 
-    context_date.fillText(`${fecha}`, 793, 1243);
+    context_date.fillText(`${fecha}`, 763, 1275);
     
 
     // Guardar la imagen con la información escrita

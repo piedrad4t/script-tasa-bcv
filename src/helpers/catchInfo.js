@@ -9,7 +9,7 @@ export const catchExchangeRate = async () => {
   const rutaCaptura = 'src/imgs/00.png';
 
   const x = 936; // Coordenada x del punto de inicio del recorte
-  const y = 205; // Coordenada y del punto de inicio del recorte
+  const y = 515; // Coordenada y del punto de inicio del recorte
   const width = 200; // Ancho del área de recorte
   const height = 180; // Alto del área de recorte
   const browser = await puppeteer.launch(); // Iniciar el navegador
@@ -86,7 +86,7 @@ export const catchInterventionRates = async () => {
 
   const x = 0; // Coordenada x del punto de inicio del recorte
   const y = 0; // Coordenada y del punto de inicio del recorte
-  const width = 800; // Ancho del área de recorte
+  const width = 750; // Ancho del área de recorte
   const height = 58; // Alto del área de recorte
   const browser = await puppeteer.launch(); // Iniciar el navegador
   const page = await browser.newPage(); // Abrir una nueva página
